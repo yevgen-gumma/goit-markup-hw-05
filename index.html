@@ -542,15 +542,17 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="footer-subscribe">
           <p class="footer-subscribe-text">Subscribe</p>
           <form class="footer-form-email">
-            <input
-              class="footer-form-input"
-              type="email"
-              name="footer-email"
-              placeholder="E-mail"
-            />
+            <label class="footer-label-email" for="footer-email">
+              <input
+                class="footer-form-input"
+                type="email"
+                name="footer-email"
+                id="footer-email"
+                placeholder="E-mail"
+            /></label>
             <button class="footer-button-subscribe" type="submit">
               Subscribe
               <svg width="24" height="24">
@@ -563,7 +565,7 @@
     </footer>
 
     <!-- Modal Window -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-close-button" type="button">
           <svg class="modal-close-button-icon" width="8" height="8">
