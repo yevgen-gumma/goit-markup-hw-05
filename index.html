@@ -555,7 +555,7 @@
             /></label>
             <button class="footer-button-subscribe" type="submit">
               Subscribe
-              <svg width="24" height="24">
+              <svg class="footer-subscribe-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-plane"></use>
               </svg>
             </button>
@@ -565,7 +565,7 @@
     </footer>
 
     <!-- Modal Window -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-close-button" type="button">
           <svg class="modal-close-button-icon" width="8" height="8">
@@ -574,7 +574,9 @@
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form>
-          <label for="user-name" class="modal-label">Name</label>
+          <div class="modal-label-input">
+            <label for="user-name" class="modal-label">Name</label>
+          </div>
           <div class="modal-enter-name">
             <input
               type="text"
@@ -586,7 +588,9 @@
               <use href="./images/icons.svg#icon-person-black"></use>
             </svg>
           </div>
-          <label for="user-tel" class="modal-label">Phone</label>
+          <div class="modal-label-input">
+            <label for="user-tel" class="modal-label">Phone</label>
+          </div>
           <div class="modal-enter-tel">
             <input
               type="tel"
@@ -598,7 +602,9 @@
               <use href="./images/icons.svg#icon-phone-black"></use>
             </svg>
           </div>
-          <label for="user-email" class="modal-label">Email</label>
+          <div class="modal-label-input">
+            <label for="user-email" class="modal-label">Email</label>
+          </div>
           <div class="modal-enter-email">
             <input
               type="email"
@@ -610,7 +616,9 @@
               <use href="./images/icons.svg#icon-email-black"></use>
             </svg>
           </div>
-          <label for="user-comment" class="modal-label">Comment</label>
+          <div class="modal-label-input">
+            <label for="user-comment" class="modal-label">Comment</label>
+          </div>
           <textarea
             name="user-comment"
             id="user-comment"

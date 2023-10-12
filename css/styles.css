@@ -543,11 +543,15 @@ span {
   background-color: transparent;
   padding: 8px 16px;
   outline: transparent;
-  color: #f4f4fd;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-form-input::placeholder {
-  color: var(--WHITE, #fff);
+  color: #ffffff;
   font-size: 12px;
   font-style: normal;
   line-height: 2;
@@ -555,7 +559,7 @@ span {
 }
 
 .footer-button-subscribe {
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
   border-radius: 4px;
@@ -567,10 +571,12 @@ span {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+}
+
+.footer-subscribe-icon {
+  margin-left: 16px;
 }
 
 /* Modal Window */
@@ -579,8 +585,10 @@ span {
   top: 0;
   width: 100%;
   height: 100%;
-  background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  background-color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
   opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
   pointer-events: none;
 }
@@ -593,7 +601,7 @@ span {
 
 .modal {
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   background-color: var(--DAIRY, #fcfcfc);
   position: absolute;
@@ -601,25 +609,31 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close-button {
   width: 24px;
   height: 24px;
   background-color: var(--CORNFLOWER, #e7e9fc);
-  border-color: rgba(0, 0, 0, 0.1);
+  padding: 0;
   border-width: 1px;
   border-radius: 50%;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 24px;
   right: 24px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-button:active,
+.modal-close-button:hover,
 .modal-close-button:focus {
   background-color: var(--OCEAN, #404bbf);
 }
@@ -628,9 +642,10 @@ span {
   max-width: 100%;
   max-height: 100%;
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-button-icon:active,
+.modal-close-button-icon:hover,
 .modal-close-button-icon:focus {
   fill: #ffffff;
 }
@@ -677,6 +692,10 @@ span {
   line-height: 1.5;
   letter-spacing: 0.04em;
   margin: 0 auto;
+}
+
+.modal-label-input {
+  margin-bottom: 8px;
 }
 
 .modal-label {
