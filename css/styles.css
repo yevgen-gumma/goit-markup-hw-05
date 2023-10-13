@@ -701,7 +701,7 @@ span {
 }
 
 .modal-label-input {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -766,7 +766,6 @@ span {
   font-style: normal;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  display: flex;
   align-items: center;
 }
 
