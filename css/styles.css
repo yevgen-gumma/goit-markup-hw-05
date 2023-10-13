@@ -672,6 +672,7 @@ span {
   margin-bottom: 8px;
   padding-left: 38px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus {
@@ -679,7 +680,7 @@ span {
 }
 
 .modal-button-send {
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
@@ -693,11 +694,14 @@ span {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  display: block;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
 }
 
 .modal-label-input {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -710,52 +714,29 @@ span {
   margin-bottom: 4px;
 }
 
-.modal-icon-person {
+.modal-icon-field {
   fill: #2e2f42;
   position: absolute;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus + .modal-icon-person {
   fill: #4d5ae5;
 }
 
-.modal-enter-name {
+.modal-enter-field {
   position: relative;
-}
-
-.modal-icon-phone {
-  fill: #2e2f42;
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .modal-form-input:focus + .modal-icon-phone {
   fill: #4d5ae5;
 }
 
-.modal-enter-tel {
-  position: relative;
-}
-
-.modal-icon-email {
-  fill: #2e2f42;
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .modal-form-input:focus + .modal-icon-email {
   fill: #4d5ae5;
-}
-
-.modal-enter-email {
-  position: relative;
 }
 
 .modal-form-texterea {
@@ -768,6 +749,15 @@ span {
   background-color: transparent;
   outline: transparent;
   margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-texterea:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-form-texterea::placeholder {
@@ -801,12 +791,17 @@ span {
 .modal-checkbox-icon {
   width: 16px;
   height: 16px;
-  border: rgba (46, 47, 66, 0.4);
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
 }
 
 .modal-checkbox-original:checked + .modal-privacy-policy .modal-checkbox-icon {
