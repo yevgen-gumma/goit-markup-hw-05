@@ -731,6 +731,10 @@ span {
   position: relative;
 }
 
+.modal-label-input-texterea {
+  margin-bottom: 16px;
+}
+
 .modal-form-texterea {
   resize: none;
   width: 360px;
